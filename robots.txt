@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://nikiliao25.github.io/Niki_Portfolio/sitemap.xml

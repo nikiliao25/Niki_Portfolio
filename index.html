@@ -1,409 +1,633 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<title>Niki Liao | Software Engineering Portfolio</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-		<!-- Custom hero background + split banner sizing/styles -->
-		<style>
-			/* ===== HERO BACKGROUND (Professional) ===== */
-			#banner.banner-split {
-				position: relative;
-				padding: 6rem 2rem;
-				overflow: hidden;
+  <title>Niki Liao — Software &amp; Machine Learning Engineer</title>
+  <meta name="description" content="Niki Liao is a software and machine learning engineer in San Diego. MS Computer Science at SDSU. Building AI-driven systems, RAG applications, and ML pipelines." />
+  <meta name="author" content="Niki Liao" />
+  <meta name="theme-color" content="#14110b" />
+  <link rel="canonical" href="https://nikiliao25.github.io/Niki_Portfolio/" />
 
-				/* Layered modern background */
-				background:
-					radial-gradient(circle at top left, rgba(255,255,255,0.06), transparent 60%),
-					radial-gradient(circle at bottom right, rgba(255,255,255,0.04), transparent 55%),
-					linear-gradient(135deg, #0f1419 0%, #121a22 45%, #0b0f14 100%);
-			}
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Niki Liao — Software &amp; Machine Learning Engineer" />
+  <meta property="og:description" content="MS Computer Science @ SDSU. Building AI-driven systems, RAG applications, and ML pipelines." />
+  <meta property="og:image" content="https://nikiliao25.github.io/Niki_Portfolio/images/og-image.png" />
+  <meta property="og:url" content="https://nikiliao25.github.io/Niki_Portfolio/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Niki Liao — Software &amp; Machine Learning Engineer" />
+  <meta name="twitter:description" content="MS Computer Science @ SDSU. Building AI-driven systems, RAG applications, and ML pipelines." />
+  <meta name="twitter:image" content="https://nikiliao25.github.io/Niki_Portfolio/images/og-image.png" />
 
-			/* Subtle texture/noise layer (very light) */
-			#banner.banner-split::after {
-				content: "";
-				position: absolute;
-				inset: 0;
-				background-image: url("data:image/svg+xml,%3Csvg width='200' height='200' viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.02'%3E%3Ccircle cx='1' cy='1' r='1'/%3E%3Ccircle cx='60' cy='40' r='1'/%3E%3Ccircle cx='120' cy='90' r='1'/%3E%3Ccircle cx='180' cy='160' r='1'/%3E%3Ccircle cx='20' cy='160' r='1'/%3E%3Ccircle cx='150' cy='20' r='1'/%3E%3C/g%3E%3C/svg%3E");
-				pointer-events: none;
-				z-index: 0;
-			}
+  <!-- Favicon: NL monogram -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23f59e0b'/%3E%3Cstop offset='1' stop-color='%23fbbf24'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23g)'/%3E%3Ctext x='50%25' y='52%25' font-family='Arial,sans-serif' font-size='30' font-weight='700' fill='%2314110b' text-anchor='middle' dominant-baseline='middle'%3ENL%3C/text%3E%3C/svg%3E" />
 
-			/* Optional soft vignette to keep attention center */
-			#banner.banner-split::before {
-				content: "";
-				position: absolute;
-				inset: 0;
-				background: radial-gradient(circle at center, transparent 40%, rgba(0,0,0,0.35) 100%);
-				pointer-events: none;
-				z-index: 0;
-			}
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
-			/* Keep banner content above background layers */
-			#banner.banner-split .inner.banner-content {
-				position: relative;
-				z-index: 1;
+  <link rel="stylesheet" href="assets/css/styles.css" />
 
-				display: flex;
-				align-items: center;
-				justify-content: space-between;
-				gap: 3rem;
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Niki Liao",
+    "jobTitle": "Software & Machine Learning Engineer",
+    "email": "mailto:nikiliao25@gmail.com",
+    "address": { "@type": "PostalAddress", "addressLocality": "San Diego", "addressRegion": "CA" },
+    "alumniOf": ["San José State University", "San Diego State University"],
+    "url": "https://nikiliao25.github.io/Niki_Portfolio/",
+    "sameAs": ["https://github.com/nikiliao25", "https://www.linkedin.com/in/niki-liao/"]
+  }
+  </script>
+</head>
 
-				max-width: 1200px;
-				margin: 0 auto;
-				width: 100%;
-			}
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-			/* ===== Left: Text ===== */
-			#banner.banner-split .banner-text {
-				flex: 1;
-				min-width: 320px;
-			}
+  <!-- ===== Header ===== -->
+  <header class="site-header" id="header">
+    <div class="container nav">
+      <a class="brand" href="#top" aria-label="Niki Liao — home">
+        <span class="monogram" aria-hidden="true">NL</span>
+        <span class="brand-name">Niki Liao</span>
+      </a>
 
-			#banner.banner-split .banner-text h2 {
-				margin-bottom: 0.75rem;
-				letter-spacing: 0.12em;
-			}
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
 
-			#banner.banner-split .banner-text p {
-				margin-bottom: 1.75rem;
-				color: rgba(255, 255, 255, 0.75);
-			}
+      <div class="nav-actions">
+        <a class="btn btn-ghost" href="assets/Niki_Liao_Resume.pdf" target="_blank" rel="noopener" style="padding:0.6rem 1rem;font-size:0.88rem;">Resume</a>
+        <button class="icon-btn theme-toggle" id="themeToggle" aria-label="Toggle color theme">
+          <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+        </button>
+        <button class="icon-btn nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
 
-			/* ===== Right: Image (Card Look) ===== */
-			#banner.banner-split .banner-image {
-				flex: 1;
-				display: flex;
-				justify-content: flex-end;
-				align-items: center;
-			}
+  <main id="main">
+    <span id="top"></span>
 
-			#banner.banner-split .banner-image img {
-				width: 100%;
-				max-width: 560px;   /* good desktop size */
-				max-height: 360px;  /* prevents it from getting too tall */
-				object-fit: cover;
+    <!-- ===== Hero ===== -->
+    <section class="hero" id="hero">
+      <div class="container hero-inner reveal">
+        <div class="hero-text">
+        <p class="hero-now">Currently an AI Application Engineer intern at Advantest, in San Diego.</p>
+        <h1>Niki Liao</h1>
+        <p class="role">Software and machine-learning engineer</p>
+        <p class="lead">
+          I'm a computer-science engineer focused on machine learning and AI
+          systems. I'm finishing my master's at San Diego State, and at Advantest
+          I'm automating parts of semiconductor test generation with AI. On my own
+          I build things end to end — a hybrid-RAG study assistant, ML models for
+          prediction and classification — from the data to the interface.
+        </p>
 
-				border-radius: 16px;
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#projects">View projects</a>
+          <a class="btn btn-ghost" href="assets/Niki_Liao_Resume.pdf" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download resume
+          </a>
+        </div>
 
-				/* Card frame */
-				background: #0f1419;
-				padding: 10px;
+        <div class="hero-socials">
+          <a href="https://github.com/nikiliao25" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5A12 12 0 0 0 0 12.5a12 12 0 0 0 8.21 11.4c.6.11.82-.26.82-.58v-2c-3.34.73-4.04-1.6-4.04-1.6-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.5.99.11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.25 2.88.12 3.18.77.84 1.23 1.91 1.23 3.22 0 4.61-2.8 5.62-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.83.58A12 12 0 0 0 24 12.5 12 12 0 0 0 12 .5z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/niki-liao/" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.22.79 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+          </a>
+          <a href="mailto:nikiliao25@gmail.com" aria-label="Email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+          </a>
+        </div>
+        </div>
 
-				box-shadow:
-					0 30px 60px rgba(0, 0, 0, 0.55),
-					0 0 0 1px rgba(255, 255, 255, 0.06);
-			}
+        <div class="hero-photo">
+          <img src="images/headshot.jpg" width="300" height="300" alt="Portrait of Niki Liao" />
+        </div>
+      </div>
+    </section>
 
-			/* Make sure the "Learn More" stays visible */
-			#banner.banner-split .more {
-				margin-top: 2rem;
-			}
+    <!-- ===== About ===== -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-text reveal">
+            <h2>About</h2>
+            <p>
+              I started out in computer science at San José State, where I
+              graduated with a 3.89 GPA and spent a couple of semesters as a
+              teaching assistant and grader for intro programming and data
+              structures. I also played club sports there, which is where the
+              scholar-athlete award on my résumé comes from. I'm now finishing
+              my master's at San Diego State.
+            </p>
+            <p>
+              Most of what I do is machine learning and AI systems. At Advantest
+              I'm automating semiconductor test generation with AI-driven tooling.
+              Outside of work I build full projects end to end — a hybrid-RAG study
+              assistant that answers questions from your own course materials, and
+              ML models that predict and classify — handling the data, the models,
+              and the interface.
+            </p>
+            <p>
+              I like problems where the result is easy to check — a query that's
+              faster, a model that's more accurate, a tool someone keeps using.
+            </p>
+          </div>
 
-			/* ===== Responsive: stack on tablets/phones ===== */
-			@media screen and (max-width: 980px) {
-				#banner.banner-split {
-					padding: 4.5rem 1.5rem;
-				}
+          <div class="about-edu reveal">
+            <h2 class="edu-title">Education</h2>
+            <div class="edu-card">
+              <div class="edu-top">
+                <h3>M.S. Computer Science</h3>
+                <span class="gpa">GPA 4.0</span>
+              </div>
+              <p class="school">San Diego State University</p>
+              <p class="meta">San Diego, CA · Expected May 2027</p>
+            </div>
+            <div class="edu-card">
+              <div class="edu-top">
+                <h3>B.S. Computer Science</h3>
+                <span class="gpa">GPA 3.89</span>
+              </div>
+              <p class="school">San José State University</p>
+              <p class="meta">San José, CA · Dean's Scholarship · President's Scholar (×3)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-				#banner.banner-split .inner.banner-content {
-					flex-direction: column;
-					text-align: center;
-					gap: 2rem;
-				}
+    <!-- ===== Experience ===== -->
+    <section class="section" id="experience" style="background:var(--bg-soft);border-block:1px solid var(--border-soft);">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2>Experience</h2>
+        </div>
 
-				#banner.banner-split .banner-text {
-					min-width: auto;
-				}
+        <div class="timeline">
+          <article class="tl-item current reveal">
+            <div class="tl-head">
+              <h3 class="tl-role">AI Application Engineer Intern</h3>
+              <span class="tl-date">May 2026 – Aug 2026</span>
+            </div>
+            <p class="tl-company">Advantest <span class="loc">· San Diego, CA</span></p>
+            <ul class="tl-list">
+              <li>Develop semiconductor test programs with the Advantest V93000 platform and SmarTest software.</li>
+              <li>Automate DPSGen and FlowGen test-generation workflows with AI-driven solutions.</li>
+              <li>Cut manual engineering effort and improved test-generation efficiency.</li>
+            </ul>
+            <div class="tl-tags">
+              <span class="tag">V93000</span><span class="tag">SmarTest</span><span class="tag">AI Automation</span><span class="tag">Python</span>
+            </div>
+          </article>
 
-				#banner.banner-split .banner-image {
-					justify-content: center;
-					width: 100%;
-				}
+          <article class="tl-item reveal">
+            <div class="tl-head">
+              <h3 class="tl-role">Machine Learning Engineer Intern</h3>
+              <span class="tl-date">Jun 2025 – Aug 2025</span>
+            </div>
+            <p class="tl-company">AGAPEA Gran Canaria SL <span class="loc">· Málaga, Spain</span></p>
+            <ul class="tl-list">
+              <li>Integrated a Random Forest model into an existing hotel pricing algorithm to predict optimal room prices.</li>
+              <li>Used hotel location and booking-period data to simulate real market behavior and improve pricing accuracy.</li>
+              <li>Automated daily margin updates from partner-agency purchase-request volume for dynamic pricing.</li>
+            </ul>
+            <div class="tl-tags">
+              <span class="tag">Python</span><span class="tag">Random Forest</span><span class="tag">scikit-learn</span><span class="tag">Pricing ML</span>
+            </div>
+          </article>
 
-				#banner.banner-split .banner-image img {
-					max-width: 720px;
-					max-height: 420px;
-				}
-			}
+          <article class="tl-item reveal">
+            <div class="tl-head">
+              <h3 class="tl-role">Software Engineer Intern</h3>
+              <span class="tl-date">May 2024 – Aug 2024</span>
+            </div>
+            <p class="tl-company">Inspira Mexico <span class="loc">· San Diego, CA</span></p>
+            <ul class="tl-list">
+              <li>Built an AI web application that analyzes hotel pricing trends and surfaces insights for hotel management.</li>
+              <li>Optimized MongoDB performance, reducing query execution time by 30%.</li>
+              <li>Designed data pipelines and refined backend services for better scalability.</li>
+            </ul>
+            <div class="tl-tags">
+              <span class="tag">JavaScript</span><span class="tag">Node.js</span><span class="tag">MongoDB</span><span class="tag">Data Pipelines</span>
+            </div>
+          </article>
 
-			/* Extra small phones */
-			@media screen and (max-width: 480px) {
-				#banner.banner-split {
-					padding: 4rem 1rem;
-				}
+          <article class="tl-item reveal">
+            <div class="tl-head">
+              <h3 class="tl-role">CS Teaching Assistant</h3>
+              <span class="tl-date">Jan 2023 – May 2023</span>
+            </div>
+            <p class="tl-company">San José State University <span class="loc">· San José, CA</span></p>
+            <ul class="tl-list">
+              <li>Led weekly Java &amp; data-structures tutorials for 30+ students.</li>
+              <li>Earned a 95% student-satisfaction rating across the term.</li>
+              <li>Helped professors develop and improve course materials.</li>
+            </ul>
+            <div class="tl-tags">
+              <span class="tag">Java</span><span class="tag">Data Structures</span><span class="tag">Teaching</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
 
-				#banner.banner-split .banner-image img {
-					max-height: 320px;
-				}
-			}
-		</style>
-	</head>
+    <!-- ===== Projects ===== -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2>Projects</h2>
+          <p>A few things I've built outside of work.</p>
+        </div>
 
-	<body class="landing is-preload">
-		<div id="page-wrapper">
+        <div class="proj-filters reveal" id="projFilters">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="ml">Machine Learning</button>
+          <button class="filter-btn" data-filter="ai">AI / NLP</button>
+          <button class="filter-btn" data-filter="data">Data</button>
+        </div>
 
-			<header id="header" class="alt">
-				<h1><a href="index.html">Niki Liao</a></h1>
-				<nav id="nav">
-					<ul>
-						<li class="special">
-							<a href="#menu" class="menuToggle"><span>Menu</span></a>
-							<div id="menu">
-								<ul>
-									<li><a href="#banner">Home</a></li>
-									<li><a href="#projects">Projects</a></li>
-									<li><a href="#experience">Experience</a></li>
-									<li><a href="#skills">Skills</a></li>
-									<li><a href="#contact">Contact</a></li>
-									<li><a href="assets/Niki_Liao_Resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a></li>
-									<li><a href="https://www.linkedin.com/in/niki-liao/" target="_blank" rel="noopener">LinkedIn</a></li>
-									<li><a href="https://github.com/nikiliao25" target="_blank" rel="noopener">GitHub</a></li>
-								</ul>
-							</div>
-						</li>
-					</ul>
-				</nav>
-			</header>
+        <div class="projects-grid" id="projectsGrid">
 
-			<!-- Banner (Text + Image with Professional Background) -->
-			<section id="banner" class="banner-split">
-				<div class="inner banner-content">
+          <!-- Project 1: RAG AI Tutor -->
+          <article class="project-card reveal" data-tags="ai ml data">
+            <div class="project-thumb">
+              <svg viewBox="0 0 400 225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Hybrid RAG pipeline diagram">
+                <defs>
+                  <linearGradient id="p1bg" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0" stop-color="#16203a"/><stop offset="1" stop-color="#0c1326"/>
+                  </linearGradient>
+                  <linearGradient id="p1ac" x1="0" y1="0" x2="1" y2="0">
+                    <stop offset="0" stop-color="#5b8cff"/><stop offset="1" stop-color="#38d6c4"/>
+                  </linearGradient>
+                </defs>
+                <rect width="400" height="225" fill="url(#p1bg)"/>
+                <!-- doc -->
+                <rect x="28" y="86" width="46" height="56" rx="5" fill="none" stroke="#5b8cff" stroke-width="2"/>
+                <line x1="37" y1="100" x2="65" y2="100" stroke="#5b8cff" stroke-width="2" opacity="0.7"/>
+                <line x1="37" y1="110" x2="65" y2="110" stroke="#5b8cff" stroke-width="2" opacity="0.5"/>
+                <line x1="37" y1="120" x2="58" y2="120" stroke="#5b8cff" stroke-width="2" opacity="0.4"/>
+                <text x="51" y="162" fill="#9aa6bf" font-family="monospace" font-size="9" text-anchor="middle">docs + OCR</text>
+                <!-- arrow -->
+                <path d="M80 114 H110" stroke="url(#p1ac)" stroke-width="2" marker-end="url(#a1)"/>
+                <!-- chunks / embeddings -->
+                <g>
+                  <rect x="120" y="78" width="20" height="20" rx="3" fill="#38d6c4" opacity="0.85"/>
+                  <rect x="120" y="103" width="20" height="20" rx="3" fill="#38d6c4" opacity="0.6"/>
+                  <rect x="120" y="128" width="20" height="20" rx="3" fill="#38d6c4" opacity="0.4"/>
+                </g>
+                <text x="130" y="170" fill="#9aa6bf" font-family="monospace" font-size="9" text-anchor="middle">embeddings</text>
+                <path d="M148 114 H178" stroke="url(#p1ac)" stroke-width="2" marker-end="url(#a1)"/>
+                <!-- FAISS + BM25 -> RRF -->
+                <rect x="186" y="80" width="74" height="30" rx="6" fill="none" stroke="#5b8cff" stroke-width="1.6"/>
+                <text x="223" y="99" fill="#cdd6ec" font-family="monospace" font-size="10" text-anchor="middle">FAISS</text>
+                <rect x="186" y="118" width="74" height="30" rx="6" fill="none" stroke="#5b8cff" stroke-width="1.6"/>
+                <text x="223" y="137" fill="#cdd6ec" font-family="monospace" font-size="10" text-anchor="middle">BM25</text>
+                <path d="M266 95 q24 19 0 38" stroke="url(#p1ac)" stroke-width="2" fill="none"/>
+                <path d="M266 133 H300" stroke="url(#p1ac)" stroke-width="2" marker-end="url(#a1)" transform="translate(0,-19)"/>
+                <!-- answer -->
+                <circle cx="332" cy="114" r="30" fill="none" stroke="url(#p1ac)" stroke-width="2.4"/>
+                <text x="332" y="110" fill="#fff" font-family="monospace" font-size="10" text-anchor="middle">RRF</text>
+                <text x="332" y="123" fill="#38d6c4" font-family="monospace" font-size="9" text-anchor="middle">answer</text>
+                <text x="332" y="170" fill="#9aa6bf" font-family="monospace" font-size="9" text-anchor="middle">+ citations</text>
+                <marker id="a1" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6 Z" fill="#38d6c4"/></marker>
+                <text x="20" y="34" fill="#5b8cff" font-family="monospace" font-size="11" font-weight="700">HYBRID RAG</text>
+              </svg>
+            </div>
+            <div class="project-body">
+              <h3>AI Tutor — Hybrid RAG Learning Assistant</h3>
+              <p class="project-date">Sep 2025 – Jan 2026 · Research project</p>
+              <p>
+                A Streamlit study assistant I built. You upload your own course files —
+                PDFs, slides, and images via OCR — and it answers questions with sources,
+                using OpenAI embeddings with hybrid FAISS + BM25 retrieval and RRF ranking.
+                On top of that it generates quizzes, spaced-repetition flashcards, a concept
+                knowledge graph, and a study planner that exports to your calendar.
+              </p>
+              <div class="project-tags">
+                <span class="tag">Python</span><span class="tag">Streamlit</span><span class="tag">RAG</span><span class="tag">FAISS</span><span class="tag">OpenAI</span><span class="tag">OCR</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/nikiliao25/AI-Tutor" target="_blank" rel="noopener">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5A12 12 0 0 0 0 12.5a12 12 0 0 0 8.21 11.4c.6.11.82-.26.82-.58v-2c-3.34.73-4.04-1.6-4.04-1.6-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.5.99.11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.25 2.88.12 3.18.77.84 1.23 1.91 1.23 3.22 0 4.61-2.8 5.62-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.83.58A12 12 0 0 0 24 12.5 12 12 0 0 0 12 .5z"/></svg>
+                  View code
+                </a>
+              </div>
+            </div>
+          </article>
 
-					<!-- Left: Text -->
-					<div class="banner-text">
-						<h2>Niki Liao</h2>
-						<p>
-							Computer Science (BS) • Incoming MS in Computer Science<br />
-							Software Engineering + Machine Learning • San Diego, CA
-						</p>
-						<ul class="actions special">
-							<li><a href="#projects" class="button primary">View Projects</a></li>
-							<li><a href="assets/Niki_Liao_Resume.pdf" class="button" target="_blank" rel="noopener">Download Resume</a></li>
-						</ul>
-					</div>
+          <!-- Project 2: La Liga predictor -->
+          <article class="project-card reveal" data-tags="ml data">
+            <div class="project-thumb">
+              <svg viewBox="0 0 400 225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="La Liga match prediction dashboard">
+                <defs>
+                  <linearGradient id="p2bg" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0" stop-color="#0d2418"/><stop offset="1" stop-color="#0b1320"/>
+                  </linearGradient>
+                </defs>
+                <rect width="400" height="225" fill="url(#p2bg)"/>
+                <!-- pitch -->
+                <rect x="24" y="40" width="200" height="150" rx="6" fill="none" stroke="#2f9e6e" stroke-width="2" opacity="0.55"/>
+                <line x1="124" y1="40" x2="124" y2="190" stroke="#2f9e6e" stroke-width="2" opacity="0.4"/>
+                <circle cx="124" cy="115" r="26" fill="none" stroke="#2f9e6e" stroke-width="2" opacity="0.4"/>
+                <rect x="24" y="85" width="26" height="60" fill="none" stroke="#2f9e6e" stroke-width="2" opacity="0.4"/>
+                <rect x="198" y="85" width="26" height="60" fill="none" stroke="#2f9e6e" stroke-width="2" opacity="0.4"/>
+                <circle cx="124" cy="115" r="5" fill="#38d6c4"/>
+                <!-- prediction bars -->
+                <text x="258" y="56" fill="#9aa6bf" font-family="monospace" font-size="10">P(outcome)</text>
+                <g font-family="monospace" font-size="10" fill="#cdd6ec">
+                  <text x="258" y="86">Home</text>
+                  <rect x="300" y="76" width="76" height="12" rx="3" fill="#5b8cff"/>
+                  <text x="258" y="116">Draw</text>
+                  <rect x="300" y="106" width="34" height="12" rx="3" fill="#46568a"/>
+                  <text x="258" y="146">Away</text>
+                  <rect x="300" y="136" width="50" height="12" rx="3" fill="#38d6c4"/>
+                </g>
+                <text x="240" y="182" fill="#2f9e6e" font-family="monospace" font-size="8.5">XGBoost · LightGBM · LogReg</text>
+                <text x="24" y="26" fill="#38d6c4" font-family="monospace" font-size="11" font-weight="700">LA LIGA PREDICTOR</text>
+              </svg>
+            </div>
+            <div class="project-body">
+              <h3>La Liga Match Outcome Predictor</h3>
+              <p class="project-date">May 2023 – Aug 2023</p>
+              <p>
+                A machine-learning pipeline that predicts La Liga match outcomes from
+                historical data. I engineered leakage-safe features with rolling stats and
+                Elo ratings, validated chronologically, and trained XGBoost, LightGBM, and
+                Logistic Regression models — surfaced through a Streamlit prediction dashboard.
+              </p>
+              <div class="project-tags">
+                <span class="tag">Python</span><span class="tag">XGBoost</span><span class="tag">LightGBM</span><span class="tag">Elo</span><span class="tag">Streamlit</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/nikiliao25/LaLigaPredictor" target="_blank" rel="noopener">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5A12 12 0 0 0 0 12.5a12 12 0 0 0 8.21 11.4c.6.11.82-.26.82-.58v-2c-3.34.73-4.04-1.6-4.04-1.6-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.5.99.11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.25 2.88.12 3.18.77.84 1.23 1.91 1.23 3.22 0 4.61-2.8 5.62-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.83.58A12 12 0 0 0 24 12.5 12 12 0 0 0 12 .5z"/></svg>
+                  View code
+                </a>
+              </div>
+            </div>
+          </article>
 
-					<!-- Right: Image -->
-					<div class="banner-image">
-						<img src="images/Banner_with_portrait.jpg" alt="Niki Liao banner portrait" />
-					</div>
+          <!-- Project 3: Image classifier -->
+          <article class="project-card reveal" data-tags="ml">
+            <div class="project-thumb">
+              <svg viewBox="0 0 400 225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="CIFAR-10 image classifier">
+                <defs>
+                  <linearGradient id="p3bg" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0" stop-color="#241733"/><stop offset="1" stop-color="#0f0c1e"/>
+                  </linearGradient>
+                </defs>
+                <rect width="400" height="225" fill="url(#p3bg)"/>
+                <text x="24" y="30" fill="#c792ea" font-family="monospace" font-size="11" font-weight="700">CIFAR-10 · SVM</text>
+                <!-- image grid -->
+                <g>
+                  <rect x="40" y="56" width="44" height="44" rx="5" fill="#5b8cff" opacity="0.8"/>
+                  <rect x="96" y="56" width="44" height="44" rx="5" fill="#38d6c4" opacity="0.7"/>
+                  <rect x="152" y="56" width="44" height="44" rx="5" fill="#c792ea" opacity="0.75"/>
+                  <rect x="40" y="112" width="44" height="44" rx="5" fill="#f7a35c" opacity="0.7"/>
+                  <rect x="96" y="112" width="44" height="44" rx="5" fill="#ff6b8a" opacity="0.7"/>
+                  <rect x="152" y="112" width="44" height="44" rx="5" fill="#5b8cff" opacity="0.55"/>
+                </g>
+                <!-- arrow to labels -->
+                <path d="M210 112 H244" stroke="#c792ea" stroke-width="2" marker-end="url(#a3)"/>
+                <marker id="a3" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6 Z" fill="#c792ea"/></marker>
+                <g font-family="monospace" font-size="11" fill="#cdd6ec">
+                  <rect x="252" y="60" width="120" height="22" rx="5" fill="none" stroke="#46568a"/>
+                  <text x="262" y="75">cat&#160;&#160;&#160;&#160;&#160;0.94</text>
+                  <rect x="252" y="90" width="120" height="22" rx="5" fill="none" stroke="#46568a"/>
+                  <text x="262" y="105">car&#160;&#160;&#160;&#160;&#160;0.91</text>
+                  <rect x="252" y="120" width="120" height="22" rx="5" fill="none" stroke="#46568a"/>
+                  <text x="262" y="135">plane&#160;&#160;0.88</text>
+                </g>
+                <text x="40" y="180" fill="#9aa6bf" font-family="monospace" font-size="9">scikit-learn · matplotlib</text>
+              </svg>
+            </div>
+            <div class="project-body">
+              <h3>Image Classifier (CIFAR-10 + SVM)</h3>
+              <p class="project-date">Sep 2023 – Dec 2023</p>
+              <p>
+                An image classifier I trained on CIFAR-10 with scikit-learn. The pipeline
+                normalizes and standardizes the images, reduces dimensions with PCA, and
+                classifies all ten categories with a linear SVM — then reports accuracy,
+                precision/recall/F1, and a confusion matrix, with a prediction grid for
+                spot-checking results.
+              </p>
+              <div class="project-tags">
+                <span class="tag">Python</span><span class="tag">scikit-learn</span><span class="tag">SVM</span><span class="tag">PCA</span><span class="tag">matplotlib</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/nikiliao25/Image-Classifier" target="_blank" rel="noopener">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5A12 12 0 0 0 0 12.5a12 12 0 0 0 8.21 11.4c.6.11.82-.26.82-.58v-2c-3.34.73-4.04-1.6-4.04-1.6-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.5.99.11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.25 2.88.12 3.18.77.84 1.23 1.91 1.23 3.22 0 4.61-2.8 5.62-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.83.58A12 12 0 0 0 24 12.5 12 12 0 0 0 12 .5z"/></svg>
+                  View code
+                </a>
+              </div>
+            </div>
+          </article>
 
-				</div>
+          <!-- Project 4: Intent chatbot -->
+          <article class="project-card reveal" data-tags="ai">
+            <div class="project-thumb">
+              <svg viewBox="0 0 400 225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Rule-based intent chatbot">
+                <defs>
+                  <linearGradient id="p4bg" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0" stop-color="#10212f"/><stop offset="1" stop-color="#0b1018"/>
+                  </linearGradient>
+                </defs>
+                <rect width="400" height="225" fill="url(#p4bg)"/>
+                <text x="24" y="30" fill="#38d6c4" font-family="monospace" font-size="11" font-weight="700">INTENT CHATBOT</text>
+                <!-- user message bubble -->
+                <rect x="206" y="54" width="160" height="36" rx="13" fill="#5b8cff"/>
+                <text x="224" y="77" fill="#fff" font-family="monospace" font-size="11">how do I reset?</text>
+                <!-- bot reply bubble -->
+                <rect x="40" y="102" width="210" height="36" rx="13" fill="none" stroke="#46568a" stroke-width="1.6"/>
+                <text x="58" y="125" fill="#cdd6ec" font-family="monospace" font-size="11">Go to Settings -&gt; Reset.</text>
+                <!-- routing + confidence -->
+                <text x="40" y="172" fill="#38d6c4" font-family="monospace" font-size="10">intent -&gt; faq</text>
+                <text x="40" y="190" fill="#9aa6bf" font-family="monospace" font-size="9">TF-IDF + cosine FAQ search</text>
+                <text x="250" y="158" fill="#9aa6bf" font-family="monospace" font-size="9">confidence</text>
+                <rect x="250" y="164" width="110" height="9" rx="4" fill="#1b2236"/>
+                <rect x="250" y="164" width="101" height="9" rx="4" fill="#38d6c4"/>
+                <text x="360" y="190" fill="#38d6c4" font-family="monospace" font-size="9" text-anchor="end">0.92</text>
+              </svg>
+            </div>
+            <div class="project-body">
+              <h3>Intent Chatbot</h3>
+              <p class="project-date">Independent project</p>
+              <p>
+                A rule-based chatbot with a Flask web interface. It first matches common
+                intents like greetings and jokes, then falls back to a TF-IDF + cosine-
+                similarity search over an FAQ knowledge base, logging every reply with a
+                confidence score. The front end is vanilla JS with typing indicators.
+              </p>
+              <div class="project-tags">
+                <span class="tag">Python</span><span class="tag">Flask</span><span class="tag">scikit-learn</span><span class="tag">TF-IDF</span><span class="tag">NLP</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/nikiliao25/Chatbot-Intent" target="_blank" rel="noopener">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5A12 12 0 0 0 0 12.5a12 12 0 0 0 8.21 11.4c.6.11.82-.26.82-.58v-2c-3.34.73-4.04-1.6-4.04-1.6-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.5.99.11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.25 2.88.12 3.18.77.84 1.23 1.91 1.23 3.22 0 4.61-2.8 5.62-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.83.58A12 12 0 0 0 24 12.5 12 12 0 0 0 12 .5z"/></svg>
+                  View code
+                </a>
+              </div>
+            </div>
+          </article>
 
-				<a href="#one" class="more scrolly">Learn More</a>
-			</section>
+        </div>
+      </div>
+    </section>
 
-			<!-- One: About -->
-			<section id="one" class="wrapper style1 special">
-				<div class="inner">
-					<header class="major">
-						<h2>About</h2>
-						<p>
-							I’m a Computer Science graduate from San José State University (GPA 3.891) and an incoming MS CS student at San Diego State University (GPA 4.0).
-							I build full-stack apps and ML-driven features, with experience in NLP, classification, and data-driven pricing systems.
-						</p>
-					</header>
+    <!-- ===== Skills ===== -->
+    <section class="section" id="skills" style="background:var(--bg-soft);border-block:1px solid var(--border-soft);">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2>Skills</h2>
+          <p>Languages, libraries, and tools I've worked with.</p>
+        </div>
 
-					<ul class="icons major">
-						<li><span class="icon solid fa-code major style3"><span class="label">Software</span></span></li>
-						<li><span class="icon solid fa-brain major style2"><span class="label">Machine Learning</span></span></li>
-						<li><span class="icon solid fa-database major style1"><span class="label">Data</span></span></li>
-					</ul>
-				</div>
-			</section>
+        <div class="skills-grid">
+          <div class="skill-card reveal">
+            <div class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
+            <h3>Languages</h3>
+            <div class="chips">
+              <span class="chip">Python</span><span class="chip">Java</span><span class="chip">JavaScript</span>
+              <span class="chip">C</span><span class="chip">C++</span><span class="chip">Racket</span>
+              <span class="chip">Ruby</span><span class="chip">Prolog</span><span class="chip">Scheme</span>
+            </div>
+          </div>
 
-			<!-- Two: Featured Projects -->
-			<section id="projects" class="wrapper alt style2">
+          <div class="skill-card reveal">
+            <div class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+            <h3>Web Development</h3>
+            <div class="chips">
+              <span class="chip">React.js</span><span class="chip">Node.js</span>
+              <span class="chip">HTML</span><span class="chip">CSS</span>
+            </div>
+          </div>
 
-				<section class="spotlight">
-					<div class="image"><img src="images/project_pricing.jpg" alt="Hotel pricing optimization project screenshot" /></div>
-					<div class="content">
-						<h2>Hotel Pricing Optimization (Random Forest)</h2>
-						<p>
-							Improved an existing hotel pricing algorithm by integrating a Random Forest model to predict optimal room prices.
-							Simulated market behavior using location + booking-period data, and automated daily margin updates using partner purchase-request volume.
-						</p>
-						<p><strong>Tech:</strong> Python • Machine Learning • Random Forest</p>
-						<ul class="actions">
-							<li><a href="https://github.com/nikiliao25" class="button" target="_blank" rel="noopener">Code</a></li>
-						</ul>
-					</div>
-				</section>
+          <div class="skill-card reveal">
+            <div class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/><path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3"/></svg></div>
+            <h3>Databases</h3>
+            <div class="chips">
+              <span class="chip">MongoDB</span><span class="chip">MySQL</span><span class="chip">SQLite</span>
+            </div>
+          </div>
 
-				<section class="spotlight">
-					<div class="image"><img src="images/project_trends.jpg" alt="AI hotel pricing trends web app screenshot" /></div>
-					<div class="content">
-						<h2>AI Web App for Hotel Pricing Trends</h2>
-						<p>
-							Developed and maintained a web application that uses AI to analyze hotel pricing trends and deliver actionable insights.
-							Optimized MongoDB performance to reduce query execution time by 30%, and contributed to data pipelines and backend scalability.
-						</p>
-						<p><strong>Tech:</strong> JavaScript • Node.js • MongoDB • Web App</p>
-						<ul class="actions">
-							<li><a href="https://github.com/nikiliao25" class="button" target="_blank" rel="noopener">Code</a></li>
-						</ul>
-					</div>
-				</section>
+          <div class="skill-card reveal">
+            <div class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a3 3 0 0 0-3 3v1a3 3 0 0 0-2 5 3 3 0 0 0 2 5v1a3 3 0 0 0 6 0v-1a3 3 0 0 0 2-5 3 3 0 0 0-2-5V5a3 3 0 0 0-3-3z"/></svg></div>
+            <h3>ML &amp; Data</h3>
+            <div class="chips">
+              <span class="chip">scikit-learn</span><span class="chip">XGBoost</span><span class="chip">LightGBM</span>
+              <span class="chip">FAISS</span><span class="chip">RAG</span><span class="chip">OpenAI</span>
+              <span class="chip">NLP</span><span class="chip">matplotlib</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-				<section class="spotlight">
-					<div class="image"><img src="images/project_chatbot.jpg" alt="Chatbot project screenshot" /></div>
-					<div class="content">
-						<h2>Chatbot with Intent Recognition</h2>
-						<p>
-							Built a rule-based chatbot using TF-IDF and cosine similarity to match user questions to predefined answers.
-							Designed intent handling for greetings, FAQs, and small talk, and deployed it as a Flask web app with a basic HTML/CSS UI.
-						</p>
-						<p><strong>Tech:</strong> Python • Flask • TF-IDF • Cosine Similarity • HTML/CSS</p>
-						<ul class="actions">
-							<li><a href="https://github.com/nikiliao25" class="button" target="_blank" rel="noopener">Code</a></li>
-						</ul>
-					</div>
-				</section>
+    <!-- ===== Contact ===== -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="contact-grid">
+          <div class="contact-info reveal">
+            <h2>Get in touch</h2>
+            <p>
+              I'm looking for software and machine-learning roles. Email is the
+              fastest way to reach me, or send a note with the form and I'll
+              reply.
+            </p>
+            <ul class="contact-channels">
+              <li>
+                <a href="mailto:nikiliao25@gmail.com">
+                  <span class="ci-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></span>
+                  <span class="ci-text"><span class="ci-label">Email</span><span class="ci-value">nikiliao25@gmail.com</span></span>
+                </a>
+              </li>
+              <li>
+                <a href="tel:+14086908362">
+                  <span class="ci-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
+                  <span class="ci-text"><span class="ci-label">Phone</span><span class="ci-value">(408) 690-8362</span></span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/in/niki-liao/" target="_blank" rel="noopener">
+                  <span class="ci-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.22.79 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></span>
+                  <span class="ci-text"><span class="ci-label">LinkedIn</span><span class="ci-value">in/niki-liao</span></span>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/nikiliao25" target="_blank" rel="noopener">
+                  <span class="ci-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5A12 12 0 0 0 0 12.5a12 12 0 0 0 8.21 11.4c.6.11.82-.26.82-.58v-2c-3.34.73-4.04-1.6-4.04-1.6-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.5.99.11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.25 2.88.12 3.18.77.84 1.23 1.91 1.23 3.22 0 4.61-2.8 5.62-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.83.58A12 12 0 0 0 24 12.5 12 12 0 0 0 12 .5z"/></svg></span>
+                  <span class="ci-text"><span class="ci-label">GitHub</span><span class="ci-value">@nikiliao25</span></span>
+                </a>
+              </li>
+            </ul>
+          </div>
 
-			</section>
+          <form class="contact-form reveal" id="contactForm" novalidate>
+            <div class="form-row">
+              <div class="field">
+                <label for="cf-name">Name</label>
+                <input type="text" id="cf-name" name="name" placeholder="Your name" required />
+              </div>
+              <div class="field">
+                <label for="cf-email">Email</label>
+                <input type="email" id="cf-email" name="email" placeholder="you@example.com" required />
+              </div>
+            </div>
+            <div class="field">
+              <label for="cf-subject">Subject</label>
+              <input type="text" id="cf-subject" name="subject" placeholder="What's this about?" />
+            </div>
+            <div class="field">
+              <label for="cf-message">Message</label>
+              <textarea id="cf-message" name="message" placeholder="Tell me a bit about the role or project…" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" id="cfSubmit">
+              <span class="btn-label">Send message</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            </button>
+            <div class="form-status" id="formStatus" role="status" aria-live="polite"></div>
+            <p class="form-note">Prefer email? Reach me directly at <a href="mailto:nikiliao25@gmail.com">nikiliao25@gmail.com</a>.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
 
-			<!-- Experience -->
-			<section id="experience" class="wrapper style3 special">
-				<div class="inner">
-					<header class="major">
-						<h2>Experience</h2>
-						<p>Hands-on experience across software engineering, ML, and teaching.</p>
-					</header>
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year">2026</span> Niki Liao · San Diego, CA</p>
+      <div class="footer-socials">
+        <a href="https://github.com/nikiliao25" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5A12 12 0 0 0 0 12.5a12 12 0 0 0 8.21 11.4c.6.11.82-.26.82-.58v-2c-3.34.73-4.04-1.6-4.04-1.6-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.5.99.11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.25 2.88.12 3.18.77.84 1.23 1.91 1.23 3.22 0 4.61-2.8 5.62-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.83.58A12 12 0 0 0 24 12.5 12 12 0 0 0 12 .5z"/></svg></a>
+        <a href="https://www.linkedin.com/in/niki-liao/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.22.79 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></a>
+        <a href="mailto:nikiliao25@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></a>
+      </div>
+    </div>
+  </footer>
 
-					<ul class="features">
-						<li class="icon solid fa-laptop">
-							<h3>Software Engineering Intern — Inspira Mexico (San Diego, CA)</h3>
-							<p>
-								Built and maintained an AI web app for hotel pricing trend analysis. Improved MongoDB efficiency and reduced query time by 30%.
-								Helped implement data pipelines and refine backend services for scalability.
-							</p>
-						</li>
+  <button class="to-top" id="toTop" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>
+  </button>
 
-						<li class="icon solid fa-brain">
-							<h3>Machine Learning Engineering Intern — AGAPEA Gran Canaria SL (Malaga, Spain)</h3>
-							<p>
-								Integrated a Random Forest ML model into a pricing algorithm to predict optimal room prices and automate daily margin updates
-								based on partner agency purchase requests.
-							</p>
-						</li>
-
-						<li class="icon solid fa-chalkboard-teacher">
-							<h3>CS Teaching Assistant — San José State University</h3>
-							<p>
-								Led weekly Java/data structures tutorials for 30+ students and achieved a 95% student satisfaction rating.
-								Assisted professors with improving course materials.
-							</p>
-						</li>
-
-						<li class="icon solid fa-clipboard-check">
-							<h3>CS Grader — San José State University</h3>
-							<p>
-								Graded Intro to Programming assignments and provided detailed feedback to strengthen student fundamentals,
-								while maintaining consistent grading standards.
-							</p>
-						</li>
-					</ul>
-
-					<header class="major" style="margin-top: 2rem;">
-						<h2>Education</h2>
-						<p>
-							<strong>BS Computer Science</strong> — San José State University (GPA 3.891)<br />
-							<strong>MS Computer Science</strong> — San Diego State University (GPA 4.0)
-						</p>
-					</header>
-				</div>
-			</section>
-
-			<!-- Skills -->
-			<section id="skills" class="wrapper style1 special">
-				<div class="inner">
-					<header class="major">
-						<h2>Technical Skills</h2>
-						<p>Skills aligned with software engineering + ML roles.</p>
-					</header>
-
-					<ul class="features" style="text-align:left;">
-						<li class="icon solid fa-code">
-							<h3>Languages</h3>
-							<p>Python, Java, JavaScript, Racket, Ruby, Prolog, Scheme, C, C++</p>
-						</li>
-						<li class="icon solid fa-laptop">
-							<h3>Web Development</h3>
-							<p>HTML, CSS, React.js, Node.js</p>
-						</li>
-						<li class="icon solid fa-database">
-							<h3>Databases</h3>
-							<p>MongoDB, MySQL, SQLite</p>
-						</li>
-					</ul>
-
-					<header class="major" style="margin-top: 2rem;">
-						<h2>More Projects</h2>
-						<p>Additional ML projects from coursework and independent work.</p>
-					</header>
-
-					<ul class="features" style="text-align:left;">
-						<li class="icon solid fa-image">
-							<h3>Image Classifier (CIFAR-10 + SVM)</h3>
-							<p>
-								Trained an image classification model using scikit-learn and CIFAR-10.
-								Preprocessed image data, classified categories with SVM, and visualized predictions with matplotlib.
-							</p>
-						</li>
-						<li class="icon solid fa-comment-dots">
-							<h3>AI-Powered Sentiment Analyzer</h3>
-							<p>
-								Built an NLP sentiment classifier using NLTK and a pre-trained Naive Bayes model,
-								with a Tkinter UI for interactive predictions.
-							</p>
-						</li>
-					</ul>
-				</div>
-			</section>
-
-			<!-- Contact -->
-			<section id="contact" class="wrapper style4">
-				<div class="inner">
-					<header>
-						<h2>Contact</h2>
-						<p>
-							Email: <a href="mailto:nikiliao25@gmail.com">nikiliao25@gmail.com</a><br />
-							Phone: (408) 690-8362<br />
-							Location: San Diego, CA
-						</p>
-					</header>
-					<ul class="actions stacked">
-						<li><a href="mailto:nikiliao25@gmail.com" class="button fit primary">Email Me</a></li>
-						<li><a href="https://www.linkedin.com/in/niki-liao/" class="button fit" target="_blank" rel="noopener">LinkedIn</a></li>
-					</ul>
-				</div>
-			</section>
-
-			<!-- Footer -->
-			<footer id="footer">
-				<ul class="icons">
-					<li><a href="https://github.com/nikiliao25" class="icon brands fa-github" target="_blank" rel="noopener"><span class="label">GitHub</span></a></li>
-					<li><a href="https://www.linkedin.com/in/niki-liao/" class="icon brands fa-linkedin" target="_blank" rel="noopener"><span class="label">LinkedIn</span></a></li>
-					<li><a href="mailto:nikiliao25@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-				</ul>
-				<ul class="copyright">
-					<li>&copy; Niki Liao</li>
-				</ul>
-			</footer>
-
-		</div>
-
-		<!-- Scripts -->
-		<script src="assets/js/jquery.min.js"></script>
-		<script src="assets/js/jquery.scrollex.min.js"></script>
-		<script src="assets/js/jquery.scrolly.min.js"></script>
-		<script src="assets/js/browser.min.js"></script>
-		<script src="assets/js/breakpoints.min.js"></script>
-		<script src="assets/js/util.js"></script>
-		<script src="assets/js/main.js"></script>
-
-	</body>
+  <script src="assets/js/app.js"></script>
+</body>
 </html>
