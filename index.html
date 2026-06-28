@@ -271,47 +271,7 @@
           <!-- Project 1: RAG AI Tutor -->
           <article class="project-card reveal" data-tags="ai ml data">
             <div class="project-thumb">
-              <svg viewBox="0 0 400 225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Hybrid RAG pipeline diagram">
-                <defs>
-                  <linearGradient id="p1bg" x1="0" y1="0" x2="1" y2="1">
-                    <stop offset="0" stop-color="#16203a"/><stop offset="1" stop-color="#0c1326"/>
-                  </linearGradient>
-                  <linearGradient id="p1ac" x1="0" y1="0" x2="1" y2="0">
-                    <stop offset="0" stop-color="#5b8cff"/><stop offset="1" stop-color="#38d6c4"/>
-                  </linearGradient>
-                </defs>
-                <rect width="400" height="225" fill="url(#p1bg)"/>
-                <!-- doc -->
-                <rect x="28" y="86" width="46" height="56" rx="5" fill="none" stroke="#5b8cff" stroke-width="2"/>
-                <line x1="37" y1="100" x2="65" y2="100" stroke="#5b8cff" stroke-width="2" opacity="0.7"/>
-                <line x1="37" y1="110" x2="65" y2="110" stroke="#5b8cff" stroke-width="2" opacity="0.5"/>
-                <line x1="37" y1="120" x2="58" y2="120" stroke="#5b8cff" stroke-width="2" opacity="0.4"/>
-                <text x="51" y="162" fill="#9aa6bf" font-family="monospace" font-size="9" text-anchor="middle">docs + OCR</text>
-                <!-- arrow -->
-                <path d="M80 114 H110" stroke="url(#p1ac)" stroke-width="2" marker-end="url(#a1)"/>
-                <!-- chunks / embeddings -->
-                <g>
-                  <rect x="120" y="78" width="20" height="20" rx="3" fill="#38d6c4" opacity="0.85"/>
-                  <rect x="120" y="103" width="20" height="20" rx="3" fill="#38d6c4" opacity="0.6"/>
-                  <rect x="120" y="128" width="20" height="20" rx="3" fill="#38d6c4" opacity="0.4"/>
-                </g>
-                <text x="130" y="170" fill="#9aa6bf" font-family="monospace" font-size="9" text-anchor="middle">embeddings</text>
-                <path d="M148 114 H178" stroke="url(#p1ac)" stroke-width="2" marker-end="url(#a1)"/>
-                <!-- FAISS + BM25 -> RRF -->
-                <rect x="186" y="80" width="74" height="30" rx="6" fill="none" stroke="#5b8cff" stroke-width="1.6"/>
-                <text x="223" y="99" fill="#cdd6ec" font-family="monospace" font-size="10" text-anchor="middle">FAISS</text>
-                <rect x="186" y="118" width="74" height="30" rx="6" fill="none" stroke="#5b8cff" stroke-width="1.6"/>
-                <text x="223" y="137" fill="#cdd6ec" font-family="monospace" font-size="10" text-anchor="middle">BM25</text>
-                <path d="M266 95 q24 19 0 38" stroke="url(#p1ac)" stroke-width="2" fill="none"/>
-                <path d="M266 133 H300" stroke="url(#p1ac)" stroke-width="2" marker-end="url(#a1)" transform="translate(0,-19)"/>
-                <!-- answer -->
-                <circle cx="332" cy="114" r="30" fill="none" stroke="url(#p1ac)" stroke-width="2.4"/>
-                <text x="332" y="110" fill="#fff" font-family="monospace" font-size="10" text-anchor="middle">RRF</text>
-                <text x="332" y="123" fill="#38d6c4" font-family="monospace" font-size="9" text-anchor="middle">answer</text>
-                <text x="332" y="170" fill="#9aa6bf" font-family="monospace" font-size="9" text-anchor="middle">+ citations</text>
-                <marker id="a1" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6 Z" fill="#38d6c4"/></marker>
-                <text x="20" y="34" fill="#5b8cff" font-family="monospace" font-size="11" font-weight="700">HYBRID RAG</text>
-              </svg>
+              <img src="images/proj-ai-tutor.jpg" alt="AI Study Tutor app: a chat answering a question with cited sources, plus tabs for quizzes, flashcards, a knowledge map and a study planner" loading="lazy" />
             </div>
             <div class="project-body">
               <h3>AI Tutor: Hybrid RAG Learning Assistant</h3>
@@ -342,33 +302,7 @@
           <!-- Project 2: La Liga predictor -->
           <article class="project-card reveal" data-tags="ml data">
             <div class="project-thumb">
-              <svg viewBox="0 0 400 225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="La Liga match prediction dashboard">
-                <defs>
-                  <linearGradient id="p2bg" x1="0" y1="0" x2="1" y2="1">
-                    <stop offset="0" stop-color="#0d2418"/><stop offset="1" stop-color="#0b1320"/>
-                  </linearGradient>
-                </defs>
-                <rect width="400" height="225" fill="url(#p2bg)"/>
-                <!-- pitch -->
-                <rect x="24" y="40" width="200" height="150" rx="6" fill="none" stroke="#2f9e6e" stroke-width="2" opacity="0.55"/>
-                <line x1="124" y1="40" x2="124" y2="190" stroke="#2f9e6e" stroke-width="2" opacity="0.4"/>
-                <circle cx="124" cy="115" r="26" fill="none" stroke="#2f9e6e" stroke-width="2" opacity="0.4"/>
-                <rect x="24" y="85" width="26" height="60" fill="none" stroke="#2f9e6e" stroke-width="2" opacity="0.4"/>
-                <rect x="198" y="85" width="26" height="60" fill="none" stroke="#2f9e6e" stroke-width="2" opacity="0.4"/>
-                <circle cx="124" cy="115" r="5" fill="#38d6c4"/>
-                <!-- prediction bars -->
-                <text x="258" y="56" fill="#9aa6bf" font-family="monospace" font-size="10">P(outcome)</text>
-                <g font-family="monospace" font-size="10" fill="#cdd6ec">
-                  <text x="258" y="86">Home</text>
-                  <rect x="300" y="76" width="76" height="12" rx="3" fill="#5b8cff"/>
-                  <text x="258" y="116">Draw</text>
-                  <rect x="300" y="106" width="34" height="12" rx="3" fill="#46568a"/>
-                  <text x="258" y="146">Away</text>
-                  <rect x="300" y="136" width="50" height="12" rx="3" fill="#38d6c4"/>
-                </g>
-                <text x="240" y="182" fill="#2f9e6e" font-family="monospace" font-size="8.5">XGBoost · LightGBM · LogReg</text>
-                <text x="24" y="26" fill="#38d6c4" font-family="monospace" font-size="11" font-weight="700">LA LIGA PREDICTOR</text>
-              </svg>
+              <img src="images/proj-laliga.jpg" alt="La Liga predictor app: XGBoost match outcome probabilities with a feature chart for Alaves vs Athletic Bilbao" loading="lazy" />
             </div>
             <div class="project-body">
               <h3>La Liga Match Outcome Predictor</h3>
